@@ -36,7 +36,7 @@ This is the CONTENT, containing the main part of the page.
             <c:if test="${empty user}">
                 <div class="left-header">
                     <div class="icon-start-page">
-                        <a class="" href="/FinalProject_MotorDepo"><i
+                        <a href="controller?command=showStartPage"><i
                                 class="fa fa-bus"></i></a>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ This is the CONTENT, containing the main part of the page.
                                 <input type="hidden" name="locale" value="en">
                                 <button class="dropdown-item" type="submit">
                                     <fmt:message key='settings_jsp.form.button_en'/>
-                                </button>
+                                </button>s
                             </form>
 
                         </div>

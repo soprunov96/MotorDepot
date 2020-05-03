@@ -94,7 +94,7 @@ This is the CONTENT, containing the main part of the page.
 
 						<div class="left-header">
 							<div class="icon-start-page">
-								<a class="" href="/FinalProject_MotorDepo"><i
+								<a class="" href="controller?command=showStartPage"><i
 									class="fa fa-bus"></i></a>
 							</div>
 						</div>

@@ -2,10 +2,6 @@
 Header (top area). 
 ===========================================================================--%>
 
-<%@ page import="ua.nure.soprunov.SummaryTask4.db.Role" %>
-<%@ page
-        import="ua.nure.soprunov.SummaryTask4.web.command.common.SetLocaleCommand" %>
-<%@ page import="java.util.Locale" %>
 <%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
 
@@ -32,7 +28,8 @@ This way we define the ADMIN MENU.
                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li class="nav-item">
                                     <div class="icon-bar">
-                                        <a class="nav-link" href="/FinalProject_MotorDepo"><i class="fa fa-bus"></i></a>
+                                        <a class="nav-link" href="controller?command=showStartPage"><i
+                                                class="fa fa-bus"></i></a>
                                     </div>
                                 </li>
                                 <li class="nav-item nav-links"><a
@@ -55,7 +52,6 @@ This way we define the ADMIN MENU.
                                         href="controller?command=list_allocation_request"><fmt:message
                                         key="header_jspf.link.Request"/></a> &nbsp;
                                 </li>
-                                    <%--	<c:out value="${commandLink}" />--%>
 
                             </ul>
 
@@ -72,7 +68,8 @@ This way we define the DISPATCHER MENU.
                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li class="nav-item">
                                     <div class="icon-bar">
-                                        <a class="nav-link" href="/FinalProject_MotorDepo"><i class="fa fa-bus"></i></a>
+                                        <a class="nav-link" href="controller?command=showStartPage"><i
+                                                class="fa fa-bus"></i></a>
                                     </div>
                                 </li>
                                 <li class="nav-item nav-links"><a
@@ -95,7 +92,8 @@ This way we define the DRIVER MENU.
                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li class="nav-item ">
                                     <div class="icon-bar">
-                                        <a class="nav-link" href="/FinalProject_MotorDepo"><i class="fa fa-bus"></i></a>
+                                        <a class="nav-link" href="controller?command=showStartPage"><i
+                                                class="fa fa-bus"></i></a>
                                     </div>
                                 </li>
 
@@ -137,17 +135,6 @@ This way we define the DRIVER MENU.
 
                     </c:choose>
 
-
-                        <%--===========================================================================
-    This way we define the settings anchor.
-    ===========================================================================--%>
-                        <%--
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item"><a href="controller?command=viewSettings"><fmt:message
-                                    key="header_jspf.link.Setting" /></a> &nbsp;</li>
-                    </ul>
-
-                --%>
                 </div>
                 <%--===========================================================================
 This way we define the menu located at the right of header. 
@@ -204,8 +191,8 @@ This way we define the menu located at the right of header.
     Type link to logout
     ===========================================================================--%>
 
-                        <span   class="header-profile-icon" onclick="openNav()"><i  id="profile_icon"
-                                class="far fa-user text-white"></i></span>
+                        <span class="header-profile-icon" onclick="openNav()"><i id="profile_icon"
+                                                                                 class="far fa-user text-white"></i></span>
                         <div id="mySidenav" class="sidenav">
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
@@ -226,17 +213,14 @@ This way we define the menu located at the right of header.
 
 
                         </div>
-                            <%--                        <button type="button" class="btn  btn-outline-primary"--%>
-                            <%--                                data-toggle="modal" data-target="#exampleModalCenter">--%>
-                            <%--                            <fmt:message key="header_jspf.button.logout"/>--%>
-                            <%--                        </button>--%>
+
 
                     </div>
                 </div>
             </c:if>
             <c:if test="${empty user and title != 'Login' and  title != 'start page'}">
                 <div id="rightHeader">
-                    <a class="btn btn-primary" href="login.jsp">  <fmt:message key="header_jspf.button.login"/></a>
+                    <a class="btn btn-primary" href="login.jsp"> <fmt:message key="header_jspf.button.login"/></a>
                 </div>
             </c:if>
 
@@ -290,7 +274,7 @@ This way we define the menu located at the right of header.
         // console.log( event.target !== profile_icon);
         // console.log( event.target );
 
-        if (event.target !== modal && event.target !== profile_icon ) {
+        if (event.target !== modal && event.target !== profile_icon) {
             closeNav()
         }
     }

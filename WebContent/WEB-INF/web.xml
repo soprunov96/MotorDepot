@@ -93,11 +93,11 @@
 		</init-param>
 		<init-param>
 			<param-name>common</param-name>
-			<param-value>logout noCommand viewSettings setLocale showStartPage getPdf</param-value>
+			<param-value>logout noCommand getPdf</param-value>
 		</init-param>
 		<init-param>
 			<param-name>out-of-control</param-name>
-			<param-value>login setLocale logout showStartPage showLoginForm</param-value>
+			<param-value>login setLocale logout showStartPage showLoginForm showStartPage</param-value>
 		</init-param>
 	</filter>
 
