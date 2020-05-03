@@ -87,7 +87,7 @@ public class CommandAccessFilter implements Filter {
 
         return accessMap.get(userRole).contains(commandName)
                 || commons.contains(commandName);
-//			return true;
+
     }
 
     public void init(FilterConfig fConfig) throws ServletException {

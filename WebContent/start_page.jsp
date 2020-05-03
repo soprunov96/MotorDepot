@@ -30,6 +30,7 @@ Just included it in this JSP document.
 ===========================================================================--%>
 
     <%-- HEADER --%>
+
     <c:if test="${not empty user}">
         <%@ include file="/WEB-INF/jspf/header.jspf" %>
     </c:if>

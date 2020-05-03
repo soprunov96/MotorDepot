@@ -54,7 +54,7 @@ public class ContextListener implements ServletContextListener {
     	context.setAttribute("locales", locales);
     	locales.list(System.out);
 		
-    	System.out.println(Locale.getDefault());
+
 		
 		log("Servlet context initialization finished");
 	}

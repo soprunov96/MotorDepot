@@ -44,7 +44,7 @@ public class EncodingFilter implements Filter {
 			LOG.trace("Request encoding = null, set encoding --> " + encoding);
 			request.setCharacterEncoding(encoding);
 		}
-		
+
 		LOG.debug("Filter finished");		
 		chain.doFilter(request, response);
 	}

@@ -94,7 +94,7 @@ after you submit current form.
                     </h1>
                     <input type="text" id="inputLogin" class="form-control"
                            placeholder="<fmt:message key="login_jsp.label.user_name" />"
-                           required autofocus name="login" required/>
+                           autofocus name="login" required/>
 
                 </div>
 

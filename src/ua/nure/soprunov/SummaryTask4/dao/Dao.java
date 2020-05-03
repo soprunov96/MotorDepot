@@ -2,8 +2,6 @@ package ua.nure.soprunov.SummaryTask4.dao;
 
 import ua.nure.soprunov.SummaryTask4.exception.DBException;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
