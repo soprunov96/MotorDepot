@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
-<%@ page import="ua.nure.soprunov.SummaryTask4.db.Role" %>
+<%@ page import="ua.nure.soprunov.SummaryTask4.Util.Role" %>
 <html>
 
 <c:set var="title" value="List users" scope="page"/>

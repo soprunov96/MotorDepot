@@ -1,4 +1,4 @@
-package ua.nure.soprunov.SummaryTask4.db.entity;
+package ua.nure.soprunov.SummaryTask4.dao.entity;
 
 import java.io.Serializable;
 

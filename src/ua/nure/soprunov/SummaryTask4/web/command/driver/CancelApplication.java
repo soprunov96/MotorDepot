@@ -7,9 +7,9 @@ import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceFactory;
 import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceType;
 import ua.nure.soprunov.SummaryTask4.dao.implementation.RequestDaoImpl;
 import ua.nure.soprunov.SummaryTask4.dao.implementation.FlightDaoImpl;
-import ua.nure.soprunov.SummaryTask4.db.Fields;
-import ua.nure.soprunov.SummaryTask4.db.entity.Flight;
-import ua.nure.soprunov.SummaryTask4.db.entity.Request;
+import ua.nure.soprunov.SummaryTask4.Util.Fields;
+import ua.nure.soprunov.SummaryTask4.dao.entity.Flight;
+import ua.nure.soprunov.SummaryTask4.dao.entity.Request;
 import ua.nure.soprunov.SummaryTask4.exception.AppException;
 import ua.nure.soprunov.SummaryTask4.web.command.Command;
 
@@ -18,7 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.util.List;
 
 /**

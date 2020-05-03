@@ -12,10 +12,8 @@ import org.apache.log4j.Logger;
 
 import ua.nure.soprunov.SummaryTask4.dao.DatabaseAbstractRepository;
 import ua.nure.soprunov.SummaryTask4.dao.FlightDao;
-import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceFactory;
-import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceType;
-import ua.nure.soprunov.SummaryTask4.db.Fields;
-import ua.nure.soprunov.SummaryTask4.db.entity.Flight;
+import ua.nure.soprunov.SummaryTask4.Util.Fields;
+import ua.nure.soprunov.SummaryTask4.dao.entity.Flight;
 import ua.nure.soprunov.SummaryTask4.exception.DBException;
 import ua.nure.soprunov.SummaryTask4.exception.Messages;
 

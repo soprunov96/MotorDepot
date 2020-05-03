@@ -3,7 +3,7 @@ package ua.nure.soprunov.SummaryTask4.dao.implementation;
 import org.junit.*;
 import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceFactory;
 import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceType;
-import ua.nure.soprunov.SummaryTask4.db.entity.Request;
+import ua.nure.soprunov.SummaryTask4.dao.entity.Request;
 import ua.nure.soprunov.SummaryTask4.exception.DBException;
 
 import java.util.List;

@@ -7,8 +7,8 @@ import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceFactory;
 import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceType;
 import ua.nure.soprunov.SummaryTask4.dao.implementation.RequestDaoImpl;
 import ua.nure.soprunov.SummaryTask4.dao.implementation.FlightDaoImpl;
-import ua.nure.soprunov.SummaryTask4.db.entity.Flight;
-import ua.nure.soprunov.SummaryTask4.db.entity.Request;
+import ua.nure.soprunov.SummaryTask4.dao.entity.Flight;
+import ua.nure.soprunov.SummaryTask4.dao.entity.Request;
 import ua.nure.soprunov.SummaryTask4.exception.AppException;
 import ua.nure.soprunov.SummaryTask4.web.command.Command;
 

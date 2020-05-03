@@ -1,6 +1,6 @@
 package ua.nure.soprunov.SummaryTask4.dao;
 
-import ua.nure.soprunov.SummaryTask4.db.entity.Request;
+import ua.nure.soprunov.SummaryTask4.dao.entity.Request;
 
 /**
  * Interface for all  RequestDao  objects extends Dao with basic crud operation.

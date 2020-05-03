@@ -1,6 +1,6 @@
 package ua.nure.soprunov.SummaryTask4.dao;
 
-import ua.nure.soprunov.SummaryTask4.db.entity.Vehicle;
+import ua.nure.soprunov.SummaryTask4.dao.entity.Vehicle;
 import ua.nure.soprunov.SummaryTask4.exception.DBException;
 
 import java.util.List;

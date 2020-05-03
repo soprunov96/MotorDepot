@@ -11,10 +11,8 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import ua.nure.soprunov.SummaryTask4.dao.UserDao;
-import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceFactory;
-import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceType;
-import ua.nure.soprunov.SummaryTask4.db.Fields;
-import ua.nure.soprunov.SummaryTask4.db.entity.User;
+import ua.nure.soprunov.SummaryTask4.Util.Fields;
+import ua.nure.soprunov.SummaryTask4.dao.entity.User;
 import ua.nure.soprunov.SummaryTask4.exception.DBException;
 import ua.nure.soprunov.SummaryTask4.exception.Messages;
 import ua.nure.soprunov.SummaryTask4.dao.DatabaseAbstractRepository;
@@ -48,12 +46,6 @@ public class UserDaoImpl extends DatabaseAbstractRepository<User> implements Use
 
     private static final String SQL_CREATE_USER = "INSERT INTO mydb.users VALUES (DEFAULT,?,?,?,?,?)";
 
-//    /**
-//     * Initializes DataSource object.
-//     */
-//    public UserDaoImpl() {
-//        super(DataSourceFactory.getDataSource(DataSourceType.MY_SQL_DATASOURCE));
-//    }
 
 
     /**

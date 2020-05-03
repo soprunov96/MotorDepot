@@ -1,4 +1,4 @@
-package ua.nure.soprunov.SummaryTask4.db;
+package ua.nure.soprunov.SummaryTask4.Util;
 
 /**
  * Holder for fields names of DB tables.

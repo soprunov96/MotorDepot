@@ -13,10 +13,10 @@ import ua.nure.soprunov.SummaryTask4.Util.ActionType;
 
 import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceFactory;
 import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceType;
-import ua.nure.soprunov.SummaryTask4.db.Fields;
+import ua.nure.soprunov.SummaryTask4.Util.Fields;
 import ua.nure.soprunov.SummaryTask4.dao.implementation.VehicleDaoImpl;
 
-import ua.nure.soprunov.SummaryTask4.db.entity.Vehicle;
+import ua.nure.soprunov.SummaryTask4.dao.entity.Vehicle;
 import ua.nure.soprunov.SummaryTask4.exception.AppException;
 import ua.nure.soprunov.SummaryTask4.exception.DBException;
 import ua.nure.soprunov.SummaryTask4.web.command.Command;

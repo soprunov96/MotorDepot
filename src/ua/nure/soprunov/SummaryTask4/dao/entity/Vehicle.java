@@ -1,4 +1,4 @@
-package ua.nure.soprunov.SummaryTask4.db.entity;
+package ua.nure.soprunov.SummaryTask4.dao.entity;
 
 /**
  * Vehicle entity.This  object characterized by model, range,

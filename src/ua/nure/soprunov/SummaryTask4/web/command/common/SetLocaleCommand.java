@@ -1,7 +1,6 @@
 package ua.nure.soprunov.SummaryTask4.web.command.common;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Locale;
 
 import javax.servlet.ServletException;
@@ -14,7 +13,7 @@ import org.apache.log4j.Logger;
 import ua.nure.soprunov.SummaryTask4.Path;
 import ua.nure.soprunov.SummaryTask4.Util.ActionType;
 
-import ua.nure.soprunov.SummaryTask4.db.Fields;
+import ua.nure.soprunov.SummaryTask4.Util.Fields;
 import ua.nure.soprunov.SummaryTask4.exception.AppException;
 import ua.nure.soprunov.SummaryTask4.exception.Messages;
 import ua.nure.soprunov.SummaryTask4.web.command.Command;

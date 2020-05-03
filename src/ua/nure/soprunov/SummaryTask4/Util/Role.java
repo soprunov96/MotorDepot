@@ -1,6 +1,6 @@
-package ua.nure.soprunov.SummaryTask4.db;
+package ua.nure.soprunov.SummaryTask4.Util;
 
-import ua.nure.soprunov.SummaryTask4.db.entity.User;
+import ua.nure.soprunov.SummaryTask4.dao.entity.User;
 
 /**
  * Role entity.

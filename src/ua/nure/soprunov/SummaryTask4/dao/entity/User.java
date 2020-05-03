@@ -1,4 +1,4 @@
-package ua.nure.soprunov.SummaryTask4.db.entity;
+package ua.nure.soprunov.SummaryTask4.dao.entity;
 
 /**
  * User entity.This transfer object characterized by id, first and last names,

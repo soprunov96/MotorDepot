@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import ua.nure.soprunov.SummaryTask4.Path;
-import ua.nure.soprunov.SummaryTask4.db.Role;
+import ua.nure.soprunov.SummaryTask4.Util.Role;
 import ua.nure.soprunov.SummaryTask4.exception.Messages;
 
 
