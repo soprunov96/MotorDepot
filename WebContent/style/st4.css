@@ -216,7 +216,7 @@ form .form-img {
     margin-botton: 0;
     padding: 0;
     border: 0;
-    background: transparent url("../images/sort_asc5.png") no-repeat center top;
+    background: transparent url("../images/sort_up.png") no-repeat center top;
     text-indent: -1000em;
     cursor: pointer;
     cursor: hand;
@@ -229,7 +229,7 @@ form .form-img {
     margin: 0;
     padding: 0;
     border: 0;
-    background: transparent url("../images/sort_desc2.png") no-repeat center top;
+    background: transparent url("../images/sort_down.png") no-repeat center top;
     text-indent: -1000em;
     cursor: pointer;
     cursor: hand;
@@ -647,7 +647,6 @@ form .form-img {
     border-bottom: 1px solid #d4d4d4;
 }
 
-/*when hovering an item:*/
 .autocomplete-items div:hover {
     background-color: #e9e9e9;
 }

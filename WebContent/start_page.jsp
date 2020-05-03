@@ -64,7 +64,7 @@ This is the CONTENT, containing the main part of the page.
 				<div class="carousel-inner">
 					<div class="carousel-item active carousel-item__img-wrapper"
 						data-interval="5000">
-						<img src="images/wallpapers-cars1.jpg"
+						<img src="images/cars1.jpg"
 							class="d-block img-fluid carousel-item__img" alt="...">
 
 					</div>
