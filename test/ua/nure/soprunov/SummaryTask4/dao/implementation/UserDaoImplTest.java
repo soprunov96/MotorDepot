@@ -1,5 +1,6 @@
 package ua.nure.soprunov.SummaryTask4.dao.implementation;
 
+import org.apache.log4j.Logger;
 import org.junit.*;
 import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceFactory;
 import ua.nure.soprunov.SummaryTask4.dao.datasource.DataSourceType;
@@ -15,6 +16,9 @@ import static org.junit.Assert.assertThat;
 import static org.junit.Assert.*;
 
 public class UserDaoImplTest {
+
+    private static final Logger LOG = Logger.getLogger(UserDaoImplTest.class);
+
     private static User user;
     private static UserDaoImpl userDaoImpl;
     private static long userId;
@@ -22,8 +26,8 @@ public class UserDaoImplTest {
 
 
     @BeforeClass
-    public static void setUpBeforeClass() throws Exception {
-        System.out.println("@BeforeClass");
+    public static void setUpBeforeClass() {
+        LOG.debug("class test starts");
         userDaoImpl = new UserDaoImpl(
                 DataSourceFactory
                         .getDataSource(DataSourceType.MY_SQL_DATASOURCE_WITH_OUT_JNDI)) {
@@ -37,11 +41,12 @@ public class UserDaoImplTest {
         User userToDelete = new User();
         userToDelete.setId(userId);
         userDaoImpl.delete(userToDelete);
+        LOG.debug("class test finished");
     }
 
     @Before
     public void setUp() throws Exception {
-        System.out.println("@Before");
+        LOG.debug("@Before test method starts");
         user = new User();
         user.setLogin("Don3");
         user.setFirstName("Al");
@@ -56,55 +61,21 @@ public class UserDaoImplTest {
 //    user = userDao.findUserByLogin(userLogin);
         userId = user.getId();
 
-
+        LOG.debug("@Before test method finished");
     }
 
     @After
     public void tearDown() throws Exception {
+        LOG.debug("@After test method starts");
         userDaoImpl.delete(user);
         user = null;
-    }
-
-
-    @Test
-    public void findTest() throws DBException {
-        assertNotNull(userDaoImpl.find(userId));
+        LOG.debug("@After test method starts");
     }
 
     @Test
-    public void update() throws DBException {
-        user.setFirstName("newLogin");
-        userDaoImpl.update(user);
+    public void create() throws DBException {
+        LOG.debug("test method starts");
 
-        assertThat(user.getFirstName(), equalTo(userDaoImpl.find(user.getId())
-                .getFirstName()));
-    }
-
-    @Test
-    public void extractUser() {
-
-    }
-
-    @Test
-    public void findUserByLogin() throws DBException {
-        assertNotNull(userDaoImpl.findUserByLogin(user.getLogin()));
-
-    }
-
-    @Test
-    public void findAllTest() throws DBException {
-        List<User> users = userDaoImpl.findAll();
-        assertThat(users.isEmpty(), is(false));
-    }
-
-//    @Test
-//    public void deleteById() throws DBException {
-//        userDaoImpl.deleteById(user.getId().toString());
-//        assertThat(userDaoImpl.find(user.getId()), is(equalTo(null)));
-//    }
-
-    @Test
-    public void createTest() throws DBException {
         userDaoImpl.delete(user);
 
         user = new User();
@@ -115,31 +86,64 @@ public class UserDaoImplTest {
         user.setRoleId(0);
 
         userDaoImpl.create(user);
-
+        LOG.trace("create user --> " + user);
         assertThat(user.getId(), not(equalTo(-1)));
 
         userDaoImpl.delete(user);
 
+        LOG.debug("test method finish");
+    }
+
+
+    @Test
+    public void update() throws DBException {
+        LOG.debug("test method starts");
+        user.setFirstName("newLogin");
+        userDaoImpl.update(user);
+
+        assertThat(user.getFirstName(), equalTo(userDaoImpl.find(user.getId())
+                .getFirstName()));
+        LOG.debug("test method finish");
     }
 
     @Test
-    public void deleteTest() throws DBException {
-        userDaoImpl.delete(user);
-        assertThat(userDaoImpl.find(user.getId()), is(equalTo(null)));
+    public void extractUser() {
+
+    }
+
+    @Test
+    public void findUserByLogin() throws DBException {
+        LOG.debug("test method starts");
+        assertNotNull(userDaoImpl.findUserByLogin(user.getLogin()));
+        LOG.trace("find user by login --> " + userDaoImpl.findUserByLogin(user.getLogin()));
+        LOG.debug("test method starts");
+
+    }
+
+    @Test
+    public void find() throws DBException {
+        LOG.debug("test method starts");
+        assertNotNull(userDaoImpl.find(userId));
+        LOG.debug("test method finish");
+    }
+
+    @Test
+    public void findAll() throws DBException {
+        LOG.debug("test method starts");
+        List<User> users = userDaoImpl.findAll();
+        LOG.trace("find all users --> " + users);
+        assertThat(users.isEmpty(), is(false));
+        LOG.debug("test method finish");
     }
 
 
-//    @Test
-//    public void changeAtributesUser() throws DBException {
-////        user.setLogin("newLogin");
-////        user.setPassword("newPassword");
-////        user.setFirstName("newFirstName");
-////        user.setLastName("newlastname");
-////        user.setRoleId(1);
-////        userDao.changeAtributesUser(userId + "",user.getLogin(),user.getPassword(),user.getFirstName(),user.getLastName(),user.getRoleId()+"");
-////        userDao.updateUser(user);
-////
-////        assertThat(user.getLogin(), equalTo(UserDao.findUser(userId)
-////                .getLogin()));
-//    }
+
+    @Test
+    public void delete() throws DBException {
+        LOG.debug("test method starts");
+        userDaoImpl.delete(user);
+        LOG.trace("delete user --> " + user);
+        assertThat(userDaoImpl.find(user.getId()), is(equalTo(null)));
+        LOG.debug("test method finish");
+    }
 }

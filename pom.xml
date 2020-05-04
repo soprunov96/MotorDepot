@@ -92,8 +92,13 @@
   </dependencies>
   
   <build>
+
     <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
     <resources>
+        <resource>
+          <directory>test/resources</directory>
+        </resource>
       <resource>
         <directory>src/resources</directory>
         <excludes>

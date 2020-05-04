@@ -171,22 +171,7 @@ This way we define the menu located at the right of header.
                             </div>
                         </div>
 
-                            <%--===========================================================================
-    Type user name if the user object is presented in the current session.
-    ===========================================================================--%>
-                            <%--                        <div class="user-name">--%>
-                            <%--                            <p class="text-white bg-dark text-header">--%>
-                            <%--                                <c:out value="${user.firstName} ${user.lastName}"/>--%>
 
-
-                            <%--                                    &lt;%&ndash;===========================================================================--%>
-                            <%--    Type user role name if the user object is presented in the current session.--%>
-                            <%--    ===========================================================================&ndash;%&gt;--%>
-                            <%--                                <c:if test="${not empty userRole}">--%>
-                            <%--                                    <c:out value=" (${userRole.name})"/>--%>
-                            <%--                                </c:if>--%>
-                            <%--                            </p>--%>
-                            <%--                        </div>--%>
                             <%--===========================================================================
     Type link to logout
     ===========================================================================--%>

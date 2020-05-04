@@ -65,7 +65,7 @@ This is the CONTENT, containing the main part of the page.
                                 <input type="hidden" name="locale" value="en">
                                 <button class="dropdown-item" type="submit">
                                     <fmt:message key='settings_jsp.form.button_en'/>
-                                </button>s
+                                </button>
                             </form>
 
                         </div>

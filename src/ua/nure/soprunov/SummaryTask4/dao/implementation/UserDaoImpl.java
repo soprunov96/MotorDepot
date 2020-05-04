@@ -146,29 +146,6 @@ public class UserDaoImpl extends DatabaseAbstractRepository<User> implements Use
     }
 
 
-    /**
-     * Update user.
-     *
-     * @param user user to update.
-     * @throws SQLException
-     * @throws DBException
-     */
-//	private void update(Connection con, User user) throws SQLException, DBException {
-//		PreparedStatement pstmt = null;
-//		try {
-//			pstmt = con.prepareStatement(SQL_UPDATE_USER);
-//			int k = 1;
-//			pstmt.setString(k++, user.getPassword());
-//			pstmt.setString(k++, user.getFirstName());
-//			pstmt.setString(k++, user.getLastName());
-//			pstmt.setLong(k++, user.getRoleId());
-//			pstmt.setLong(k, user.getId());
-//			pstmt.executeUpdate();
-//			con.commit();
-//		} finally {
-//			close(pstmt);
-//		}
-//	}
 
     /**
      * Extracts a user entity from the result set.

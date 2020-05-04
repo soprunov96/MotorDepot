@@ -60,13 +60,7 @@ public class FlightDaoImpl extends DatabaseAbstractRepository<Flight> implements
 
 	private static final String SQL_DELETE_FLIGHT_BY_ID = "DELETE FROM mydb.flights WHERE mydb.flights.id=?";
 
-//    /**
-//     * Initializes DataSource object.
-//     */
-//
-//    public FlightDaoImpl() throws DBException {
-//        super(DataSourceFactory.getDataSource(DataSourceType.MY_SQL_DATASOURCE));
-//    }
+
 
 
     /**
