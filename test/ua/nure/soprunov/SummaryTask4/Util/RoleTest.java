@@ -1,7 +1,6 @@
-package ua.nure.soprunov.SummaryTask4.db;
+package ua.nure.soprunov.SummaryTask4.Util;
 
 import org.junit.Test;
-import ua.nure.soprunov.SummaryTask4.Util.Role;
 import ua.nure.soprunov.SummaryTask4.dao.entity.User;
 
 import static org.junit.Assert.*;
