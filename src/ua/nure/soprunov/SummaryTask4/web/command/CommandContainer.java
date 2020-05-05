@@ -34,6 +34,7 @@ public class CommandContainer {
         commands.put("showStartPage", new ShowStartPageCommand());
         commands.put("getPdf", new GetPdfCommand());
         commands.put("showLoginForm", new ShowLoginFormCommand());
+        commands.put("changeAvatar", new ChangeAvatarCommand());
 
         // driver commands
         commands.put("free_list_auto_flights", new FreeListAutoFlightsCommand());

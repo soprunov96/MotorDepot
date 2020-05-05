@@ -76,7 +76,12 @@ public class CreateUsersCommand extends Command {
         String password = request.getParameter(Fields.USER_PASSWORD);
         String firstName = request.getParameter(Fields.USER_FIRST_NAME);
         String lastName = request.getParameter(Fields.USER_LAST_NAME);
+        String userAvatar = request.getParameter(Fields.USER_AVATAR);
         String roleId = request.getParameter(Fields.USER_ROLE_ID);
+
+        if (userAvatar == null){
+            userAvatar = "img_avatar";
+        }
 
         String strongPassword = null;
         try {
@@ -85,7 +90,7 @@ public class CreateUsersCommand extends Command {
             e.printStackTrace();
         }
         
-        User user = new User(login, strongPassword , firstName, lastName, Integer.parseInt(roleId));
+        User user = new User(login, strongPassword , firstName, lastName, userAvatar, Integer.parseInt(roleId));
 
         LOG.info("Create new: user --> " + user);
          new UserDaoImpl( DataSourceFactory

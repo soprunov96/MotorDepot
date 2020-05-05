@@ -469,7 +469,7 @@ form .form-img {
 
 .sidenav {
     text-align: left;
-    height: 60%;
+    height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -482,10 +482,7 @@ form .form-img {
 }
 
 
-
-
-
-.closebtn  {
+.closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -498,6 +495,7 @@ form .form-img {
     display: block;
     transition: 0.3s;
 }
+
 .closebtn:hover {
     color: #007bff;
 
@@ -626,7 +624,6 @@ form .form-img {
 }
 
 
-
 .autocomplete-items {
     position: absolute;
     border: 1px solid #d4d4d4;
@@ -655,4 +652,8 @@ form .form-img {
 .autocomplete-active {
     background-color: DodgerBlue !important;
     color: #ffffff;
+}
+
+.profile-input {
+    margin-bottom: 10px;
 }

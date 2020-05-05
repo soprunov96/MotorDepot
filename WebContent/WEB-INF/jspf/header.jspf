@@ -182,7 +182,7 @@ This way we define the menu located at the right of header.
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
                             <div class="profile bg-white">
-                                <img src="images/img_avatar.png" alt="Avatar">
+                                <img src="images/${user.userAvatar}" alt="Avatar">
                                 <h4 class="display-5"><c:out value="${user.firstName} ${user.lastName}"/></h4>
                                 <c:if test="${not empty userRole}">
                                     <h4 class="display-5"><c:out value=" (${userRole.name})"/></h4>
@@ -193,7 +193,29 @@ This way we define the menu located at the right of header.
                                     <fmt:message key="header_jspf.button.logout"/>
                                 </button>
                                 <a class="btn btn-outline-primary"
-                                   href="controller?command=getPdf">get Pdf</a> &nbsp;
+                                   href="controller?command=getPdf"><fmt:message key="header_jspf.profile.btn.getPdf"/></a> &nbsp;
+                                <hr class="my-4">
+                                <form action="controller?command=changeAvatar" method="post"
+                                      enctype="multipart/form-data">
+                                    <input type="hidden" name="previousCommand"
+                                           value="${pageContext.request.queryString}">
+                                    <input type="hidden" name="id"
+                                           value="${user.id}">
+                                    <h6 class="display-5"><fmt:message key="header_jspf.profile.text.change_avatar"/></h6>
+                                    <div class="input-group profile-input">
+                                        <div class="custom-file">
+                                            <input class="custom-file-input" type="file" id="myFile" name="filename"
+                                                   accept=".png, .jpg, .jpeg">
+
+                                            <label class="custom-file-label" for="myFile" ><fmt:message key="header_jspf.profile.input.choose_file"/></label>
+
+                                        </div>
+
+                                    </div>
+                                    <button class="btn btn-outline-primary" type="submit"
+                                            id="inputGroupFileAddon04"><fmt:message key="header_jspf.profile.button.upload"/>
+                                    </button>
+                                </form>
                             </div>
 
 
@@ -240,5 +262,11 @@ This way we define the menu located at the right of header.
     </div>
 </div>
 
-
-<script src="${pageContext.request.contextPath}/script/openProfile.js"> </script>
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
+<script src="${pageContext.request.contextPath}/script/openProfile.js"></script>

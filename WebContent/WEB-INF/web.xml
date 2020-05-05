@@ -93,7 +93,7 @@
 		</init-param>
 		<init-param>
 			<param-name>common</param-name>
-			<param-value>logout noCommand getPdf</param-value>
+			<param-value>logout noCommand getPdf changeAvatar</param-value>
 		</init-param>
 		<init-param>
 			<param-name>out-of-control</param-name>

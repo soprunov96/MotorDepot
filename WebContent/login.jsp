@@ -5,6 +5,7 @@
 
 <c:set var="title" value="Login"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
+<fmt:setLocale value="${param.locale}" scope="session"/>
 <link href="style/signin.css" rel="stylesheet">
 
 <body>

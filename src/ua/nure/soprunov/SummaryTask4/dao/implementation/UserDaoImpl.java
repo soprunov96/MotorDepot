@@ -41,10 +41,10 @@ public class UserDaoImpl extends DatabaseAbstractRepository<User> implements Use
 
     private static final String SQL_FIND_USER_BY_LOGIN = "SELECT * FROM mydb.users WHERE mydb.users.login =?";
 
-    private static final String SQL_UPDATE_USER = "UPDATE mydb.users SET mydb.users.password=?, mydb.users.first_name=?, mydb.users.last_name=?, mydb.users.role_id=?"
+    private static final String SQL_UPDATE_USER = "UPDATE mydb.users SET mydb.users.password=?, mydb.users.first_name=?, mydb.users.last_name=?, mydb.users.user_avatar=?, mydb.users.role_id=?"
             + "	WHERE users.id=? ";
 
-    private static final String SQL_CREATE_USER = "INSERT INTO mydb.users VALUES (DEFAULT,?,?,?,?,?)";
+    private static final String SQL_CREATE_USER = "INSERT INTO mydb.users VALUES (DEFAULT,?,?,?,?,?,?)";
 
 
 
@@ -108,6 +108,7 @@ public class UserDaoImpl extends DatabaseAbstractRepository<User> implements Use
             pstmt.setString(k++, user.getPassword());
             pstmt.setString(k++, user.getFirstName());
             pstmt.setString(k++, user.getLastName());
+            pstmt.setString(k++, user.getUserAvatar());
             pstmt.setLong(k++, user.getRoleId());
 
             pstmt.setLong(k, user.getId());
@@ -160,6 +161,7 @@ public class UserDaoImpl extends DatabaseAbstractRepository<User> implements Use
         user.setPassword(rs.getString(Fields.USER_PASSWORD));
         user.setFirstName(rs.getString(Fields.USER_FIRST_NAME));
         user.setLastName(rs.getString(Fields.USER_LAST_NAME));
+        user.setUserAvatar(rs.getString(Fields.USER_AVATAR));
         user.setRoleId(rs.getInt(Fields.USER_ROLE_ID));
         return user;
     }
@@ -249,7 +251,8 @@ public class UserDaoImpl extends DatabaseAbstractRepository<User> implements Use
             pstmt.setString(2, user.getPassword());
             pstmt.setString(3, user.getFirstName());
             pstmt.setString(4, user.getLastName());
-            pstmt.setInt(5, user.getRoleId());
+            pstmt.setString(5, user.getUserAvatar());
+            pstmt.setInt(6, user.getRoleId());
             pstmt.execute();
 
             con.commit();

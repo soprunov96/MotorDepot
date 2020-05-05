@@ -30,7 +30,7 @@ public final class Fields {
 	public static final String USER_FIRST_NAME = "first_name";
 	public static final String USER_LAST_NAME = "last_name";
 	public static final String USER_ROLE_ID = "role_id";
-	
+	public static final String USER_AVATAR= "user_avatar";
 	
 	public static final String LIST_FLIGHT_ID = "id";
 	public static final String LIST_FLIGHT_NAME = "name";

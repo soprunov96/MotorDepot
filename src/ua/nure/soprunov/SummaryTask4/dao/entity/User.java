@@ -19,19 +19,24 @@ public class User extends Entity {
 
     private String lastName;
 
+    private String userAvatar;
+
+
     private int roleId;
 
     public User() {
     }
 
-    public User(String login, String password, String firstName, String lastName, int roleId) {
+    public User(String login, String password, String firstName, String lastName, String userAvatar, int roleId) {
         super();
         this.login = login;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.userAvatar = userAvatar;
         this.roleId = roleId;
     }
+
 
     public String getLogin() {
         return login;
@@ -65,6 +70,14 @@ public class User extends Entity {
         this.lastName = lastName;
     }
 
+    public String getUserAvatar() {
+        return userAvatar;
+    }
+
+    public void setUserAvatar(String userAvatar) {
+        this.userAvatar = userAvatar;
+    }
+
     public int getRoleId() {
         return roleId;
     }
@@ -78,6 +91,7 @@ public class User extends Entity {
         return "User [login=" + login
                 + ", firstName=" + firstName
                 + ", lastName=" + lastName
+                + ", userAvatar=" + userAvatar
                 + ", roleId=" + roleId + "]";
     }
 
