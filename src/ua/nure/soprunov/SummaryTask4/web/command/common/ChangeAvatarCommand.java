@@ -16,18 +16,20 @@ import ua.nure.soprunov.SummaryTask4.exception.AppException;
 import ua.nure.soprunov.SummaryTask4.exception.Messages;
 import ua.nure.soprunov.SummaryTask4.web.command.Command;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.io.*;
-import java.util.Iterator;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
-import java.util.Locale;
 
+
+/**
+ * ChangeAvatarCommand  download  avatar img, insert  img data to db. Command allowed  for all users.
+ *
+ * @author Soprunov Igor
+ */
 
 @MultipartConfig
 public class ChangeAvatarCommand extends Command {
@@ -47,10 +49,6 @@ public class ChangeAvatarCommand extends Command {
     public String execute(HttpServletRequest request, HttpServletResponse response, ActionType actionType)
             throws IOException, ServletException, AppException {
         LOG.debug("Command execution starts");
-
-
-
-
 
         System.out.println(request.getContextPath());
 
@@ -143,8 +141,6 @@ public class ChangeAvatarCommand extends Command {
             return Path.COMMAND_SHOW_START_PAGE;
         }
         LOG.debug("Finished executing Command");
-
         return "?" + command;
-
     }
 }

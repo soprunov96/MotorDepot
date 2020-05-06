@@ -110,9 +110,6 @@ public class LoginCommand extends Command {
         session.setAttribute("userRole", userRole);
         LOG.trace("Set the session attribute: userRole --> " + userRole);
 
-//        session.setAttribute("userAvatar", "images/" + user.getUserAvatar() + ".png");
-//        LOG.trace("Set the session attribute: userAvatar --> " + "images/ " + user.getUserAvatar() + ".png");
-
         LOG.info("User " + user + " logged as " + userRole.toString().toLowerCase());
 
         LOG.debug("Command finished");

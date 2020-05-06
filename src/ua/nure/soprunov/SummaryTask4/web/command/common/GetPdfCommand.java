@@ -27,6 +27,12 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
 
+/**
+ * GetPdfCommand command generate pdf list of flights. Command allowed  for all users.
+ *
+ * @author Soprunov Igor
+ */
+
 public class GetPdfCommand extends Command {
 
 
@@ -41,10 +47,6 @@ public class GetPdfCommand extends Command {
         LOG.debug("Command starts");
 
 
-        String text = request.getParameter("text");
-        if (text == null || text.trim().length() == 0) {
-            text = "You didn't enter any text.";
-        }
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PdfDocument pdfDoc = new PdfDocument(new PdfWriter(baos));
         Document doc = new Document(pdfDoc, new PageSize(595, 842));
@@ -54,12 +56,11 @@ public class GetPdfCommand extends Command {
         table.setMarginTop(0);
         table.setMarginBottom(0);
 
-        // first row
-        Cell cell = new Cell(1, 8).add(new Paragraph("List auto flights"));
-        cell.setTextAlignment(TextAlignment.CENTER);
-        cell.setPadding(5);
-        cell.setBackgroundColor(new DeviceRgb(140, 221, 8));
-        table.addCell(cell);
+        Cell firstRow = new Cell(1, 8).add(new Paragraph("List auto flights"));
+        firstRow.setTextAlignment(TextAlignment.CENTER);
+        firstRow.setPadding(5);
+        firstRow.setBackgroundColor(new DeviceRgb(140, 221, 8));
+        table.addCell(firstRow);
 
         table.addCell("Number");
         table.addCell("Flight name");
