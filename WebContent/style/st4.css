@@ -474,7 +474,7 @@ form .form-img {
     position: fixed;
     z-index: 1;
     top: 0;
-    right: 0px;
+    right: 0;
     background-color: #fff;
     overflow-x: hidden;
     transition: 0.5s;

@@ -41,7 +41,6 @@ public class GetPdfCommand extends Command {
         LOG.debug("Command starts");
 
 
-
         String text = request.getParameter("text");
         if (text == null || text.trim().length() == 0) {
             text = "You didn't enter any text.";
@@ -62,7 +61,7 @@ public class GetPdfCommand extends Command {
         cell.setBackgroundColor(new DeviceRgb(140, 221, 8));
         table.addCell(cell);
 
-        table.addCell("Calldate");
+        table.addCell("Number");
         table.addCell("Flight name");
         table.addCell("Date");
         table.addCell("Depart point");
@@ -82,8 +81,13 @@ public class GetPdfCommand extends Command {
             table.addCell(listFlights.get(i).getDate());
             table.addCell(listFlights.get(i).getDepart());
             table.addCell(listFlights.get(i).getArrival());
-            table.addCell(listFlights.get(i).getDriverName()+"");
-            table.addCell(listFlights.get(i).getCarModel()+"");
+            if (listFlights.get(i).getDriverName() != null & listFlights.get(i).getCarModel() != null) {
+                table.addCell(listFlights.get(i).getDriverName());
+                table.addCell(listFlights.get(i).getCarModel());
+            } else {
+                table.addCell("");
+                table.addCell("");
+            }
             table.addCell(listFlights.get(i).getStatus());
 
         }
