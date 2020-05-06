@@ -102,14 +102,16 @@ public class LoginCommand extends Command {
         if (userRole == Role.DRIVER) {
             forward = Path.DRIVER_COMMAND_LIST_AUTO_FLIGHTS;
         }
+
+
         session.setAttribute("user", user);
         LOG.trace("Set the session attribute: user --> " + user);
 
         session.setAttribute("userRole", userRole);
         LOG.trace("Set the session attribute: userRole --> " + userRole);
 
-        session.setAttribute("userAvatar", "images/" + user.getUserAvatar() + ".png");
-        LOG.trace("Set the session attribute: userAvatar --> " + "images/ " + user.getUserAvatar() + ".png");
+//        session.setAttribute("userAvatar", "images/" + user.getUserAvatar() + ".png");
+//        LOG.trace("Set the session attribute: userAvatar --> " + "images/ " + user.getUserAvatar() + ".png");
 
         LOG.info("User " + user + " logged as " + userRole.toString().toLowerCase());
 

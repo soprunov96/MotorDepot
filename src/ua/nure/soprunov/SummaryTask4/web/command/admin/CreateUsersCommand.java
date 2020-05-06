@@ -80,7 +80,7 @@ public class CreateUsersCommand extends Command {
         String roleId = request.getParameter(Fields.USER_ROLE_ID);
 
         if (userAvatar == null){
-            userAvatar = "img_avatar";
+            userAvatar = "img_avatar.png";
         }
 
         String strongPassword = null;
