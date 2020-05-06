@@ -9,7 +9,7 @@
     <tag>
         <description>Tag that check login unique. One attribute are required: 'login'.</description>
         <name>checkLogin</name>
-        <tag-class>ua.nure.soprunov.SummaryTask4.CustomTag</tag-class>
+        <tag-class>ua.nure.soprunov.SummaryTask.CustomTag</tag-class>
         <body-content>empty</body-content>
         <attribute>
             <description>check Login</description>
