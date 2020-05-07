@@ -177,6 +177,33 @@ public class ConsiderRequestCommand extends Command {
         String driverId = request.getParameter(Fields.LIST_FLIGHT_DRIVER_ID);
         LOG.trace("Get request parameter: 'driverId' = " + driverId);
 
+
+        String name =  request.getParameter(Fields.LIST_FLIGHT_NAME);
+        LOG.trace("Get request parameter: 'name' = " + name);
+
+        String date = request.getParameter(Fields.LIST_FLIGHT_DATE);
+        LOG.trace("Get request parameter: 'date' = " + date);
+
+        String depart = request.getParameter(Fields.LIST_FLIGHT_DEPART);
+        LOG.trace("Get request parameter: 'depart' = " + depart );
+
+        String arrival = request.getParameter(Fields.LIST_FLIGHT_ARRIVAL);
+        LOG.trace("Get request parameter: 'arrival' = " + arrival);
+
+        String status = request.getParameter(Fields.LIST_FLIGHT_STATUS);
+        LOG.trace("Get request parameter: 'status' = " + status);
+
+        Flight flight =  new FlightDaoImpl(datasource).find(Long.parseLong(id));
+        flight.setName(name);
+        flight.setDate(date);
+        flight.setArrival(arrival);
+        flight.setDepart(depart);
+        flight.setStatus(status);
+
+        new FlightDaoImpl(datasource).update(flight);
+        LOG.trace("Update in DB: flight --> " + flight);
+
+
         new FlightDaoImpl(datasource).appointDriverAndCar(id, Long.parseLong(driverId), Long.parseLong(carId));
 
         List<Flight> listFlights = new FlightDaoImpl(datasource).findAll();

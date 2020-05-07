@@ -24,7 +24,8 @@
             </h3>
 
             <p style="color: red;">${errorString}</p>
-            <form method="POST" action="controller?command=editFlight">
+            <<form action="controller" method="POST">
+                <input type="hidden" name="command" value="considerRequest">
                 <div class="editFlight text-white bg-dark">
                     <input type="hidden" name="id" value="${id}"/>
 
@@ -117,11 +118,10 @@
                     </div>
 
                 </div>
-            </form>
 
 
-            <form action="controller" method="POST">
-                <input type="hidden" name="command" value="considerRequest">
+
+
                 <input type="hidden" name="driver_id" value="${driver_id}">
                 <input type="hidden" name="id" value="${id}">
                 <table class="table table-hover table-dark">
