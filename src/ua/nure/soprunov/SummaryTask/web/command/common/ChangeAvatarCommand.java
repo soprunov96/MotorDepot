@@ -37,9 +37,9 @@ public class ChangeAvatarCommand extends Command {
     private String fileName;
     private String command;
     private String userId;
-    private final int fileMaxSize = 100 * 1024;
-    private final int memMaxSize = 100 * 1024;
-    private String UPLOAD_DIRECTORY = "E:/Project/Motor-Depot-Motor-depot/Motor-Depot-Motor-depot/WebContent/images";
+    private final int fileMaxSize = 10000 * 1024;
+    private final int memMaxSize = 1000 * 1024;
+    private String UPLOAD_DIRECTORY = "E:/Project/Motor-Depot-Motor-depot/Motor-depot/WebContent/images";
 
 
 

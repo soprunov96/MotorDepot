@@ -37,7 +37,7 @@
                             <label for="inputModel"><fmt:message key="vehicle.create_vehicle_jsp.label.model"/></label>
                             <input type="text"
                                    class="form-control" value="${model}" name="model" id="inputModel" autofocus
-                                   pattern="[A-Za-zА-Яа-я]*"
+                                   pattern="[A-Za-zА-Яа-я-\s0-9]*"
                                    required>
                         </div>
 

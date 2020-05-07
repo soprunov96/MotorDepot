@@ -37,7 +37,7 @@
                             <input type="text"
                                    class="form-control" value="${model}" id="inputModel" name="model"
                                    placeholder="Model" autofocus
-                                   pattern="[A-Za-zА-Яа-я]*"
+                                   pattern="[A-Za-zА-Яа-я-\s0-9]*"
                                    required>
                         </div>
                         <div class="form-group col-md-5">

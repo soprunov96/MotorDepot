@@ -104,6 +104,7 @@ public class LoginCommand extends Command {
         }
 
 
+
         session.setAttribute("user", user);
         LOG.trace("Set the session attribute: user --> " + user);
 

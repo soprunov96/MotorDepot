@@ -37,14 +37,6 @@ public abstract class DataSourceFactory {
             case MY_SQL_DATASOURCE:
                 Context initContext;
                 try {
-//                    Properties props = new Properties();
-//                    props.setProperty(Context.INITIAL_CONTEXT_FACTORY, "org.apache.camel.util.jndi.CamelInitialContextFactory");
-//                    System.setProperty(Context.INITIAL_CONTEXT_FACTORY,
-//                            "org.apache.naming.java.javaURLContextFactory");
-//                    System.setProperty(Context.URL_PKG_PREFIXES,
-//                            "org.apache.naming");
-
-//                    initContext = new InitialContext(props);
 
                     initContext = new InitialContext();
 

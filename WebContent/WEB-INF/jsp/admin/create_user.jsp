@@ -29,7 +29,7 @@
                        value="${recordsPerPage}"> <input type="hidden" name="id"
                                                          value="${id}"/>
                 <div class="editFlight text-white bg-dark">
-                    <input type="hidden" name="id" value="${id}"/>
+
 
                     <div class="form-row d-flex justify-content-around">
 
@@ -126,7 +126,7 @@
                 xmlhttp.onreadystatechange = function () {
                     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 
-                        var answer = xmlhttp.responseText.replace(/\r|\n/g, '');
+                        var answer = xmlhttp.responseText.replace(/[\r\n]/g, '');
 
                         if (answer === "User already exists") {
                             console.log(xmlhttp.responseText);

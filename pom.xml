@@ -9,6 +9,11 @@
   </properties>
   <dependencies>
     <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>${apache.commons.fileupload.version}</version>
+    </dependency>
+    <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
       <version>8.0.1</version>
@@ -26,11 +31,7 @@
       <artifactId>cassandra-all</artifactId>
       <version>0.8.1</version>
     </dependency>
-    <dependency>
-    <groupId>commons-fileupload</groupId>
-    <artifactId>commons-fileupload</artifactId>
-    <version>${apache.commons.fileupload.version}</version>
-  </dependency>
+
     <dependency>
     	<groupId>log4j</groupId>
     	<artifactId>log4j</artifactId>
