@@ -114,7 +114,7 @@ public abstract class DatabaseAbstractRepository<T> implements Dao <T>{
     /**
      * Closes resources.
      */
-    public void close(Connection con, Statement stmt, ResultSet rs) {
+    protected void close(Connection con, Statement stmt, ResultSet rs) {
         close(rs);
         close(stmt);
         close(con);
