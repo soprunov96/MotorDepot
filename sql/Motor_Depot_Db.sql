@@ -46,7 +46,7 @@ CREATE TABLE mydb.users(
 	password VARCHAR(255) NOT NULL,
 	first_name VARCHAR(20)NOT NULL,
 	last_name VARCHAR(20) NOT NULL,
-	
+	user_avatar VARCHAR(45) ,
 -- this declaration contains the foreign key constraint	
 -- role_id in users table is associated with id in roles table
 -- role_id of user = id of role
@@ -65,14 +65,14 @@ CREATE TABLE mydb.users(
 );
 
 -- id = 1
-INSERT INTO mydb.users (`login`, `password`, `first_name`, `last_name`, `role_id`) VALUES( 'admin', '1000:b611cf3040307002c31109db4093d451:1cca30c19ffba3956648d64d8e54658c', 'Ivan', 'Ivanov', 0);
+INSERT INTO mydb.users (`login`, `password`, `first_name`, `last_name`,`user_avatar`,`role_id`) VALUES( 'admin', '1000:b611cf3040307002c31109db4093d451:1cca30c19ffba3956648d64d8e54658c', 'Ivan', 'Ivanov','img_avatar.png', 0);
 -- id = 2
-INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`, `role_id`) VALUES( 'dispatcher', '1000:64a97d4d1df219fef845a62232b24a31:80350a875e642712c97e09b0b69b2249', 'Petr', 'Petrov', 1);
+INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`,`user_avatar`, `role_id`) VALUES( 'dispatcher', '1000:64a97d4d1df219fef845a62232b24a31:80350a875e642712c97e09b0b69b2249', 'Petr', 'Petrov','img_avatar2.png', 1);
 -- id = 3
-INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`, `role_id`) VALUES('driver', '1000:c1b719958a05ebb5d7e2d7eebd14c846:6e0c0eedf101f74a795b576bd32c109c', 'Petr', 'Petrov', 2);
-INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`, `role_id`) VALUES( 'driver2', '1000:c1b719958a05ebb5d7e2d7eebd14c846:6e0c0eedf101f74a795b576bd32c109c', 'Dima', 'Sidorov', 2);
-INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`, `role_id`) VALUES( 'driver3', '1000:c1b719958a05ebb5d7e2d7eebd14c846:6e0c0eedf101f74a795b576bd32c109c', 'Igor', 'Pupkin', 2);
-INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`, `role_id`) VALUES( 'driver4', '1000:c1b719958a05ebb5d7e2d7eebd14c846:6e0c0eedf101f74a795b576bd32c109c', 'Senya', 'Sidorov', 2);
+INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`,`user_avatar`, `role_id`) VALUES('driver', '1000:c1b719958a05ebb5d7e2d7eebd14c846:6e0c0eedf101f74a795b576bd32c109c', 'Petr', 'Petrov','img_avatar2.png', 2);
+INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`,`user_avatar`, `role_id`) VALUES( 'driver2', '1000:c1b719958a05ebb5d7e2d7eebd14c846:6e0c0eedf101f74a795b576bd32c109c', 'Dima', 'Sidorov','img_avatar.png', 2);
+INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`,`user_avatar`, `role_id`) VALUES( 'driver3', '1000:c1b719958a05ebb5d7e2d7eebd14c846:6e0c0eedf101f74a795b576bd32c109c', 'Igor', 'Pupkin','img_avatar2.png', 2);
+INSERT INTO mydb.users ( `login`, `password`, `first_name`, `last_name`,`user_avatar`, `role_id`) VALUES( 'driver4', '1000:c1b719958a05ebb5d7e2d7eebd14c846:6e0c0eedf101f74a795b576bd32c109c', 'Senya', 'Sidorov','img_avatar2.png', 2);
 
 
 DROP TABLE IF EXISTS mydb.`vehicles`;
@@ -142,14 +142,24 @@ PRIMARY KEY (`id`)
 --
 
 INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,vehicle_id,request_id,status)
-  VALUES ('FirstFlght','2008-11-11','SAHARA','MOSKOW','3','1',1,'in progress');
+  VALUES ('FirstFlght','2008-11-11','Kyiv','Kharkiv','3','1',1,'in progress');
  
   INSERT INTO mydb.flights ( name, date, departure_point,arrival_point,status)
- VALUES ('Second','2018-11-11','zumma','Talin','open');
+ VALUES ('Second','2018-11-11','Odessa','Dnipro','open');
  
   INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, request_id,status)
- VALUES ('FirstFlghtttt','2008-11-12','SAHARAaa','MOSKOWaa',2,'open');
+ VALUES ('Donetsk-Zaporizhia','2008-11-12','Donetsk','Zaporizhia',2,'open');
  INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,vehicle_id,request_id,status)
-  VALUES ('FirstFlght','2008-11-11','SAHARA','MOSKOW','3','1',1,'in progress');
+  VALUES ('Lviv-Mykolaiv','2008-11-11','Lviv','Mykolaiv','3','1',1,'in progress');
   INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,vehicle_id,request_id,status)
-  VALUES ('FirstFlght','2008-11-11','SAHARA','MOSKOW','3','1',1,'in progress');
+  VALUES ('Mariupol-Luhansk','2008-11-11','Mariupol','Luhansk','3','1',1,'in progress');
+
+  INSERT INTO mydb.flights ( name, date, departure_point,arrival_point,status)
+ VALUES ('Sevastopol-Vinnytsia','2018-11-11','Sevastopol','Vinnytsia','open');
+ 
+  INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, request_id,status)
+ VALUES ('Makiivka-Simferopol','2008-11-12','Makiivka','Simferopol',2,'open');
+ INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,vehicle_id,request_id,status)
+  VALUES ('Kherson-Poltava','2008-11-11','Kherson','Poltava','3','1',1,'in progress');
+  INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,vehicle_id,request_id,status)
+  VALUES ('Chernihiv-Cherkasy','2008-11-11','Chernihiv','Cherkasy','3','1',1,'in progress');
