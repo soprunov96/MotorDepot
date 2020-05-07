@@ -42,7 +42,7 @@
                                                                                       class="form-control"
                                                                                       value="${name}" id="inputName"
                                                                                       name="name" autofocus
-                                                                                      required pattern="[A-Za-zА-Яа-я]*">
+                                                                                      required pattern="[A-Za-zА-Яа-я-]*">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputDate"><fmt:message

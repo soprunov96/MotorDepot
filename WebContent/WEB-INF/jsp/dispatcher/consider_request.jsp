@@ -43,7 +43,7 @@
                                                                                       class="form-control"
                                                                                       value="${name}" id="inputName"
                                                                                       name="name" autofocus
-                                                                                      pattern="[A-Za-zА-Яа-я]*"
+                                                                                      pattern="[A-Za-zА-Яа-я-]*"
                                                                                       required>
                         </div>
                         <div class="form-group col-md-3">
