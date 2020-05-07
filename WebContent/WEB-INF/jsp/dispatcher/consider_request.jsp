@@ -16,7 +16,7 @@
 
     <tr>
         <td class="content">
-            <%-- CONTENT --%>
+
 
             <h3 class="text-white">
                 <fmt:message
@@ -24,7 +24,8 @@
             </h3>
 
             <p style="color: red;">${errorString}</p>
-            <<form action="controller" method="POST">
+            <
+            <form action="controller" method="POST">
                 <input type="hidden" name="command" value="considerRequest">
                 <div class="editFlight text-white bg-dark">
                     <input type="hidden" name="id" value="${id}"/>
@@ -118,8 +119,6 @@
                     </div>
 
                 </div>
-
-
 
 
                 <input type="hidden" name="driver_id" value="${driver_id}">

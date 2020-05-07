@@ -34,7 +34,7 @@ public class EditFlightCommand extends Command {
 
 	private static final Logger LOG = Logger.getLogger(EditFlightCommand.class);
 
-    DataSource datasource = DataSourceFactory
+    private DataSource datasource = DataSourceFactory
             .getDataSource(DataSourceType.MY_SQL_DATASOURCE);
 
 	@Override
