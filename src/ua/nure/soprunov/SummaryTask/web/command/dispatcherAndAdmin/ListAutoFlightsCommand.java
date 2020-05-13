@@ -78,12 +78,12 @@ public class ListAutoFlightsCommand extends Command {
         request.setAttribute(Fields.RECORDS_PER_PAGE, recordsPerPage);
         request.setAttribute(Fields.SORT_BY, sortBy);
 
-        // get menu items list
+
         List<Flight> listFlights = new FlightDaoImpl(DataSourceFactory
                 .getDataSource(DataSourceType.MY_SQL_DATASOURCE)).findFlightsListSortBy(currentPageInt, recordsPerPageInt, sortBy);
         LOG.trace("Found in DB: listFlights --> " + listFlights);
 
-        // put menu items list to the request
+
         request.setAttribute("listFlight", listFlights);
         LOG.trace("Set the request attribute: listFlights --> " + listFlights);
 

@@ -141,7 +141,7 @@
                             <td>${vechicle.status}</td>
 
                             <td><label class="radio-buttons">
-                                <input type="radio" name="vehicle_id" value="${vechicle.id}" required>
+                                <input type="radio" name="vehicle_id" value="${vechicle.id}"  ${(vechicle.id).equals(checkVehicle)? 'checked' : '' } required>
                                 <span class="checkmark"></span>
                             </label></td>
                         </tr>

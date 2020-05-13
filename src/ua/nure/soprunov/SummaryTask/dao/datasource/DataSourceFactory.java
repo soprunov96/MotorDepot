@@ -37,9 +37,7 @@ public abstract class DataSourceFactory {
             case MY_SQL_DATASOURCE:
                 Context initContext;
                 try {
-
                     initContext = new InitialContext();
-
                     return (DataSource) initContext
                             .lookup("java:/comp/env/jdbc/MYDB");
                 } catch (NamingException e) {

@@ -39,12 +39,15 @@
                                                                                           class="form-control"
                                                                                           value="${name}" id="inputName"
                                                                                           name="name" autofocus
-                                                                                          required pattern="[A-Za-zА-Яа-я-]*">
+                                                                                          required
+                                                                                          pattern="[A-Za-zА-Яа-я-]*">
                             </div>
                             <div class="form-group col-md-5">
                                 <label for="inputDate"><fmt:message
                                         key="flight.list_jsp.label.date"/></label> <input type="date"
                                                                                           name="date" value="${date}"
+                            <%--                                                                                          min="2020-05-08"--%>
+                                                                                          min="${localDate}"
                                                                                           id="inputDate" required
                                                                                           class="form-control">
                             </div>
@@ -57,7 +60,8 @@
                                                                                             value="${departure_point}"
                                                                                             id="inputDepart"
                                                                                             class="form-control "
-                                                                                            required pattern="[A-Za-zА-Яа-я]*">
+                                                                                            required
+                                                                                            pattern="[A-Za-zА-Яа-я]*">
                             </div>
                             <div class="form-group col-md-5">
                                 <label for="inputArrival"><fmt:message
@@ -65,7 +69,8 @@
                                                                                              class="form-control"
                                                                                              value="${arrival_point}"
                                                                                              name="arrival_point"
-                                                                                             required id="inputArrival" pattern="[A-Za-zА-Яа-я]*">
+                                                                                             required id="inputArrival"
+                                                                                             pattern="[A-Za-zА-Яа-я]*">
                             </div>
                         </div>
 

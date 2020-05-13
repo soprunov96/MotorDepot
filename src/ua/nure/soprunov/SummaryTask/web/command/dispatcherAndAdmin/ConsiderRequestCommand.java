@@ -68,6 +68,7 @@ public class ConsiderRequestCommand extends Command {
         Request considerRequest = new RequestDaoImpl(datasource).find(Long.parseLong(id));
         LOG.trace("Found in DB: Station --> " + considerRequest);
 
+
         request.setAttribute(Fields.LIST_REQUEST_ID, considerRequest.getId());
         LOG.trace("Set attribute 'id': " + considerRequest.getId());
 
@@ -102,11 +103,15 @@ public class ConsiderRequestCommand extends Command {
         request.setAttribute(Fields.LIST_FLIGHT_DATE, considerFlight.getDate());
         LOG.trace("Set attribute 'date': " + considerFlight.getDate());
 
+        request.setAttribute("checkVehicle", considerFlight.getVehicleId());
+        LOG.trace("Set attribute 'checkVehicle': " + considerFlight.getVehicleId());
+
         request.setAttribute(Fields.LIST_FLIGHT_DEPART, considerFlight.getDepart());
         LOG.trace("Set attribute 'depart': " + considerFlight.getDepart());
 
         request.setAttribute(Fields.LIST_FLIGHT_ARRIVAL, considerFlight.getArrival());
         LOG.trace("Set attribute 'arrival': " + considerFlight.getArrival());
+
 
         request.setAttribute(Fields.LIST_FLIGHT_STATUS, considerFlight.getStatus());
         LOG.trace("Set attribute 'status': " + considerFlight.getStatus());

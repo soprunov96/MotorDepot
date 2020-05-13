@@ -1,6 +1,8 @@
 package ua.nure.soprunov.SummaryTask.web.command.dispatcherAndAdmin;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -55,12 +57,18 @@ public class CreateFlightCommand extends Command {
 
 	private String doGet(HttpServletRequest request, HttpServletResponse response) throws DBException {
 		LOG.debug("Commands starts");
-		
-		String recordsPerPage = (String) request.getParameter("recordsPerPage");
-		System.out.println(recordsPerPage + " recordsPerPage!!!!!!!!!");
 
-		String currentPage = (String) request.getParameter("currentPage");
-		System.out.println(currentPage + " currentPage!!!!!!!!!");
+		String recordsPerPage =  request.getParameter(Fields.RECORDS_PER_PAGE);
+		LOG.trace("Get attribute 'recordsPerPage': " + recordsPerPage);
+
+		LocalDate localDate = LocalDate.now();
+		System.out.println(DateTimeFormatter.ofPattern("yyy/MM/dd").format(localDate));
+
+		request.setAttribute("localDate", localDate);
+		LOG.trace("Set attribute 'localDate': " + localDate);
+
+		String currentPage = request.getParameter(Fields.CURRENT_PAGE);
+		LOG.trace("Get attribute 'currentPage': " + currentPage);
 		LOG.debug("return" + Path.PAGE_CREATE_FLIGHT);
 		LOG.debug("Commands finished");
 		return Path.PAGE_CREATE_FLIGHT;
@@ -77,20 +85,26 @@ public class CreateFlightCommand extends Command {
 		// get parameters from page
 		LOG.debug("Commands starts");
 
-		String name = request.getParameter(Fields.LIST_FLIGHT_NAME);
-		System.out.println(name + " name!!!!!!!!!");
+		String name =  request.getParameter(Fields.LIST_FLIGHT_NAME);
+		LOG.trace("Get request parameter: 'name' = " + name);
 
 		String date = request.getParameter(Fields.LIST_FLIGHT_DATE);
-		System.out.println(date + " date!!!!!!!!!");
+		LOG.trace("Get request parameter: 'date' = " + date);
 
 		String depart = request.getParameter(Fields.LIST_FLIGHT_DEPART);
-		System.out.println(depart + " depart!!!!!!!!!");
+		LOG.trace("Get request parameter: 'depart' = " + depart );
 
 		String arrival = request.getParameter(Fields.LIST_FLIGHT_ARRIVAL);
-		System.out.println(arrival + "arrival!!!!!!!!!");
+		LOG.trace("Get request parameter: 'arrival' = " + arrival);
 
 		Flight flight = new Flight(name, date, depart, arrival);
 		new FlightDaoImpl(datasource).create(flight);
+
+
+
+
+
+
 
 		String recordsPerPage =  request.getParameter(Fields.RECORDS_PER_PAGE);
 		LOG.trace("Get attribute 'recordsPerPage': " + recordsPerPage);

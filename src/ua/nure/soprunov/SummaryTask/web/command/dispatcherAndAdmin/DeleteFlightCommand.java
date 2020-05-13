@@ -17,6 +17,7 @@ import ua.nure.soprunov.SummaryTask.dao.datasource.DataSourceType;
 import ua.nure.soprunov.SummaryTask.Util.Fields;
 import ua.nure.soprunov.SummaryTask.dao.implementation.FlightDaoImpl;
 import ua.nure.soprunov.SummaryTask.dao.entity.Flight;
+import ua.nure.soprunov.SummaryTask.dao.implementation.RequestDaoImpl;
 import ua.nure.soprunov.SummaryTask.exception.AppException;
 import ua.nure.soprunov.SummaryTask.web.command.Command;
 
@@ -42,9 +43,10 @@ public class DeleteFlightCommand extends Command {
         String id = request.getParameter(Fields.LIST_FLIGHT_ID);
         LOG.trace("Fetch request parapeter: 'id' = " + id);
 
-        Flight flight = new FlightDaoImpl(DataSourceFactory
-                .getDataSource(DataSourceType.MY_SQL_DATASOURCE)).find(Long.parseLong(id));
+        Flight flight = new FlightDaoImpl(datasource).find(Long.parseLong(id));
         new FlightDaoImpl(datasource).delete(flight);
+
+        new RequestDaoImpl(datasource).delete(new RequestDaoImpl(datasource).find(flight.getRequestId()));
 
         String recordsPerPage = request.getParameter(Fields.RECORDS_PER_PAGE);
         LOG.trace("Get attribute 'recordsPerPage': " + recordsPerPage);
