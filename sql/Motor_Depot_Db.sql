@@ -128,7 +128,7 @@ name VARCHAR(32),
   status VARCHAR(45) NOT NULL,
   
   FOREIGN KEY (`request_id`) REFERENCES `requests` (`request_id`) 
-     ON update cascade,
+     ON update cascade ON DELETE cascade,
    FOREIGN KEY (`driver_id`) REFERENCES `users` (`id`) 
      ON DELETE cascade,
   FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles` (`id`) 
