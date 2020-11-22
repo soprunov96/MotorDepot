@@ -2,7 +2,8 @@
 <%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
 <%@ page import="ua.nure.soprunov.SummaryTask.Util.Role" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <c:set var="title" value="List users" scope="page"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
@@ -76,12 +77,13 @@
                         <td>${Role.showUserRole(user.roleId)}</td>
                         <td>
                             <div class="action_icons"><a class=""
-                                                         href="controller?command=editUser&login=${user.login}"><i
+                                                         href="controller?command=editUser&login=${user.login}" aria-label="Edit"><i
                                     class="fa fa-edit"></i>
                             </a> /
                                 <button type="button" class="btn btn-link icon_delete"
                                         data-toggle="modal" data-target="#deleteEntity"
                                         name="idToDelete"
+                                        aria-label="Remove the element"
                                         data-id="${user.id}"><i class="fa fa-trash"></i></button>
                             </div>
                         </td>

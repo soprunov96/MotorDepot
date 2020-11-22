@@ -1,7 +1,8 @@
 <%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <c:set var="title" value="start page"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
@@ -90,7 +91,7 @@ This is the CONTENT, containing the main part of the page.
 
                     <div class="left-header">
                         <div class="icon-start-page">
-                            <a class="" href="controller?command=showStartPage"><i
+                            <a class="" href="controller?command=showStartPage" aria-label="Logo"><i
                                     class="fa fa-bus"></i></a>
                         </div>
                     </div>

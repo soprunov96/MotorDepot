@@ -3,5 +3,5 @@ Footer (bottom area).
 ===========================================================================--%> 
 
 <tr>
-	<td id="footer"><p class="text-white bg-dark text-footer">&copy;MOTOR DEPOT(Soprunov, EPAM-KNURE Java Training), 2020</p></td>
+	<td id="footer"><p class="text-white bg-dark text-footer">&copy;MOTOR DEPOT, 2020</p></td>
 </tr>
