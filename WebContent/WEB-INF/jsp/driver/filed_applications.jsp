@@ -2,7 +2,8 @@
 <%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <c:set var="title" value="Filed applications" scope="page"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
@@ -152,6 +153,7 @@
                             <button type="button" class="btn btn-link icon_delete"
                                     data-toggle="modal" data-target="#deleteEntity"
                                     name="idToDelete"
+                                    aria-label="Remove the element"
                                     data-id="${request.id}"><i class="fa fa-trash"></i></button>
                         </td>
 

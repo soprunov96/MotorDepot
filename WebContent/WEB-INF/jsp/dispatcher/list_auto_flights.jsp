@@ -2,7 +2,8 @@
 <%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 
 <c:set var="title" value="List auto flights" scope="page"/>
@@ -211,12 +212,13 @@
 
                             <td>
                                 <div class="action_icons"><a class=""
-                                                             href="controller?command=editFlight&id=${flight.id}"><i
+                                                             href="controller?command=editFlight&id=${flight.id}" aria-label="Edit"><i
                                         class="fa fa-edit"></i>
                                 </a> /
                                     <button type="button" class="btn btn-link icon_delete"
                                             data-toggle="modal" data-target="#deleteEntity"
                                             name="idToDelete"
+                                            aria-label="Remove the element"
                                             data-id="${flight.id}"><i class="fa fa-trash"></i></button>
                                 </div>
                             </td>

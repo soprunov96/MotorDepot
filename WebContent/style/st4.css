@@ -3,6 +3,7 @@ CSS for all JSP pages
 ***************************************************************/
 body {
     margin: 0;
+    height: 100vh;
 }
 
 table {
@@ -251,6 +252,10 @@ form .form-img {
 
 .navbar-padding {
     padding: 0 10px;
+}
+
+.nav-link__bus {
+    padding-top: 0;
 }
 
 .editFlight {
