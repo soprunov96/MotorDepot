@@ -26,7 +26,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Command that application to flight. Command allowed only for drivers.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class PrepareApplicationCommand extends Command {

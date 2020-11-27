@@ -22,7 +22,7 @@ import javax.sql.DataSource;
 /**
  * Flight DAO implementation. Performs basic read/write operations on Flight entity.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  *
  */
 

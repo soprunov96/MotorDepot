@@ -112,7 +112,7 @@ CREATE TABLE mydb.`requests` (
 --
 -- Dumping data for table `requests`
 --
-INSERT INTO mydb.`requests` VALUES (1,100,'sedan',3),(2,100,'buss',3);
+INSERT INTO mydb.`requests` VALUES (1,100,'sedan',3),(2,100,'buss',3),(3,100,'sedan',3),(4,100,'buss',3),(5,100,'sedan',3),(6,100,'buss',3),(7,100,'sedan',3);
 
     
 CREATE TABLE mydb.flights(
@@ -150,16 +150,16 @@ INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,v
   INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, request_id,status)
  VALUES ('Donetsk-Zaporizhia','2008-11-12','Donetsk','Zaporizhia',2,'open');
  INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,vehicle_id,request_id,status)
-  VALUES ('Lviv-Mykolaiv','2008-11-11','Lviv','Mykolaiv','3','1',1,'in progress');
+  VALUES ('Lviv-Mykolaiv','2008-11-11','Lviv','Mykolaiv','3','1',3,'in progress');
   INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,vehicle_id,request_id,status)
-  VALUES ('Mariupol-Luhansk','2008-11-11','Mariupol','Luhansk','3','1',1,'in progress');
+  VALUES ('Mariupol-Luhansk','2008-11-11','Mariupol','Luhansk','3','1',4,'in progress');
 
   INSERT INTO mydb.flights ( name, date, departure_point,arrival_point,status)
  VALUES ('Sevastopol-Vinnytsia','2018-11-11','Sevastopol','Vinnytsia','open');
  
   INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, request_id,status)
- VALUES ('Makiivka-Simferopol','2008-11-12','Makiivka','Simferopol',2,'open');
+ VALUES ('Makiivka-Simferopol','2008-11-12','Makiivka','Simferopol',5,'open');
  INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,vehicle_id,request_id,status)
-  VALUES ('Kherson-Poltava','2008-11-11','Kherson','Poltava','3','1',1,'in progress');
+  VALUES ('Kherson-Poltava','2008-11-11','Kherson','Poltava','3','1',6,'in progress');
   INSERT INTO mydb.flights ( name, date,departure_point,arrival_point, driver_id,vehicle_id,request_id,status)
-  VALUES ('Chernihiv-Cherkasy','2008-11-11','Chernihiv','Cherkasy','3','1',1,'in progress');
+  VALUES ('Chernihiv-Cherkasy','2008-11-11','Chernihiv','Cherkasy','3','1',7,'in progress');

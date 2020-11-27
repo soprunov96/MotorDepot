@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * Show login form page. Command allowed  for all users.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 

@@ -24,7 +24,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Command that create new vehicles. Command allowed only for admins.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  *
  */
 

@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * GetPdfCommand command generate pdf list of flights. Command allowed  for all users.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class GetPdfCommand extends Command {

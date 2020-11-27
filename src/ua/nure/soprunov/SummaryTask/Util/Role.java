@@ -5,7 +5,7 @@ import ua.nure.soprunov.SummaryTask.dao.entity.User;
 /**
  * Role entity.
  * 
- * @author Igor.Soprunov
+ * @author Soprunov Igor & Pavlo Kosiak
  * 
  */
 

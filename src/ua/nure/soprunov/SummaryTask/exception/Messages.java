@@ -3,7 +3,7 @@ package ua.nure.soprunov.SummaryTask.exception;
 /**
  * Holder for messages of exceptions.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 public class Messages {
 

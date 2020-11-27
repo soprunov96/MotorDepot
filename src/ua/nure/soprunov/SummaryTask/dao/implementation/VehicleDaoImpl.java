@@ -22,7 +22,7 @@ import javax.sql.DataSource;
 /**
  * Vehicle DAO implementation. Performs basic read/write operations on Vehicle entity.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  *
  */
 

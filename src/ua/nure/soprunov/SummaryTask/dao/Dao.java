@@ -11,7 +11,7 @@ import java.util.List;
  * <code>T</code> in the database.
  *
  * @param <T> type of the object
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public interface Dao<T> {

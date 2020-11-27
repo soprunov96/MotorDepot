@@ -15,6 +15,7 @@ import ua.nure.soprunov.SummaryTask.Util.ActionType;
 import ua.nure.soprunov.SummaryTask.dao.datasource.DataSourceFactory;
 import ua.nure.soprunov.SummaryTask.dao.datasource.DataSourceType;
 import ua.nure.soprunov.SummaryTask.Util.Fields;
+import ua.nure.soprunov.SummaryTask.dao.entity.Request;
 import ua.nure.soprunov.SummaryTask.dao.implementation.FlightDaoImpl;
 import ua.nure.soprunov.SummaryTask.dao.entity.Flight;
 import ua.nure.soprunov.SummaryTask.dao.implementation.RequestDaoImpl;
@@ -24,7 +25,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Command that delete flight. Command allowed  for admins and dispatchers.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class DeleteFlightCommand extends Command {
@@ -46,8 +47,10 @@ public class DeleteFlightCommand extends Command {
         Flight flight = new FlightDaoImpl(datasource).find(Long.parseLong(id));
         new FlightDaoImpl(datasource).delete(flight);
 
-        new RequestDaoImpl(datasource).delete(new RequestDaoImpl(datasource).find(flight.getRequestId()));
-
+        Request requestId = new RequestDaoImpl(datasource).find(flight.getRequestId());
+        if (requestId != null) {
+            new RequestDaoImpl(datasource).delete(requestId);
+        }
         String recordsPerPage = request.getParameter(Fields.RECORDS_PER_PAGE);
         LOG.trace("Get attribute 'recordsPerPage': " + recordsPerPage);
 

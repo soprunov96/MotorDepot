@@ -50,6 +50,7 @@
                             <label for="inputDate"><fmt:message
                                     key="flight.list_jsp.label.date"/></label> <input type="date"
                                                                                       name="date" value="${date}"
+                                                                                      min="${localDate}"
                                                                                       id="inputDate" required
                                                                                       class="form-control">
                         </div>

@@ -9,7 +9,7 @@ import ua.nure.soprunov.SummaryTask.exception.DBException;
  * In this class we can add some specific operations for UserDao implementation
  *
  * @see ua.nure.soprunov.SummaryTask.dao.Dao
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public interface UserDao extends Dao<User> {

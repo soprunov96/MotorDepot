@@ -29,7 +29,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
  * Update info about vehicle and flight.
  * Command allowed only for drivers.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class FinishedFlightCommand extends Command {

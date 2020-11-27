@@ -20,7 +20,7 @@ import ua.nure.soprunov.SummaryTask.web.command.CommandContainer;
  * requests by the client and then processes them according to specified command
  * name.
  * 
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public class Controller extends HttpServlet {

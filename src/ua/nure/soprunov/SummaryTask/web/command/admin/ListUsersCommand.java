@@ -21,7 +21,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Command that show all list of users. Command allowed only for admins.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  *
  */
 

@@ -11,7 +11,7 @@ import ua.nure.soprunov.SummaryTask.Util.ActionType;
 /**
  * No command.
  * 
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public class NoCommand extends Command {

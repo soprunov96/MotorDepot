@@ -17,7 +17,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Show start page before user login. Command allowed  for all users.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class ShowStartPageCommand extends Command {

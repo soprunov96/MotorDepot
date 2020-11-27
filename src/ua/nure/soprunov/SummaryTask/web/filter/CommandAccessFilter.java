@@ -23,7 +23,7 @@ import ua.nure.soprunov.SummaryTask.exception.Messages;
  * Security filter. Filter which performs authorization of the user to access resources of the
  * application. Use web.xml to make a access permissions.
  *
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  */
 public class CommandAccessFilter implements Filter {
 

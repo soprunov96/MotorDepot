@@ -3,7 +3,7 @@ package ua.nure.soprunov.SummaryTask.Util;
 /**
  * Holder for fields names of DB tables.
  * 
- * @author Igor Soprunov 
+ @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public final class Fields {

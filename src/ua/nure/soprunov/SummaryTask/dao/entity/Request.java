@@ -4,7 +4,7 @@ package ua.nure.soprunov.SummaryTask.dao.entity;
  * Request entity.
  * Every flight have range, date, carType, driver id who create this request.
  *
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class Request extends Entity {

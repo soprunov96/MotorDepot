@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
  * Encoding filter. Checks for requested client encoding. If none requested
  *  - sets to UTF-8.
  * 
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public class EncodingFilter implements Filter {

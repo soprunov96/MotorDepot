@@ -124,7 +124,7 @@
                     <thead>
 
                     <c:forEach items="${listFlight}" var="flight">
-                    <c:if test="${flight.driverId == user.id}">
+<%--                    <c:if test="${flight.driverId == user.id}">--%>
                     <tr>
                         <td>${flight.id}</td>
                         <td>${flight.name}</td>
@@ -140,7 +140,7 @@
                         </td>
 
                     </tr>
-                    </c:if>
+<%--                    </c:if>--%>
                     </c:forEach>
                 </table>
             </form>

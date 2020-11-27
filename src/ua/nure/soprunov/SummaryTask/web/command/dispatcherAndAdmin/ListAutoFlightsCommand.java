@@ -23,7 +23,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Command that show all list of flights. Command allowed only for admins and dispatcher.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  *
  */
 

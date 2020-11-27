@@ -22,7 +22,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Change locale command. Command allowed  for all users.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class SetLocaleCommand extends Command {

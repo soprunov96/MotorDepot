@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 
 import ua.nure.soprunov.SummaryTask.Path;
 import ua.nure.soprunov.SummaryTask.Util.ActionType;
+import ua.nure.soprunov.SummaryTask.Util.Date;
 import ua.nure.soprunov.SummaryTask.dao.datasource.DataSourceFactory;
 import ua.nure.soprunov.SummaryTask.dao.datasource.DataSourceType;
 import ua.nure.soprunov.SummaryTask.Util.Fields;
@@ -30,7 +31,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Command that consider request. Command allowed  for admins and dispatchers.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  *
  */
 
@@ -148,6 +149,8 @@ public class ConsiderRequestCommand extends Command {
         request.setAttribute(Fields.RECORDS_PER_PAGE, recordsPerPage);
         request.setAttribute(Fields.SORT_BY, sortBy);
 
+        request.setAttribute("localDate", new Date().getLocalDate());
+        LOG.trace("Set attribute 'localDate': " + new Date().getLocalDate());
 
         List<Vehicle> listVechicles = new VehicleDaoImpl(DataSourceFactory
                 .getDataSource(DataSourceType.MY_SQL_DATASOURCE)).findVechicleListSortBy(currentPageInt, recordsPerPageInt, sortBy);

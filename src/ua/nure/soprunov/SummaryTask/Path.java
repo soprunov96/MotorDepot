@@ -3,7 +3,7 @@ package ua.nure.soprunov.SummaryTask;
 /**
  * Path holder (jsp pages, controller commands).
  * 
- * @author Igor.Soprunov
+ * @author Soprunov Igor & Pavlo Kosiak
  * 
  */
 
