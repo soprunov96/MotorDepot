@@ -10,7 +10,7 @@ import java.util.List;
  * In this class we can add some specific operations for VehicleDao implementation
  *
  * @see ua.nure.soprunov.SummaryTask.dao.Dao
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 

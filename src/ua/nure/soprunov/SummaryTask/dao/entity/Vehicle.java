@@ -4,7 +4,7 @@ package ua.nure.soprunov.SummaryTask.dao.entity;
  * Vehicle entity.This  object characterized by model, range,
  * type,status. Every field must be filled.
  *
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class Vehicle extends Entity {

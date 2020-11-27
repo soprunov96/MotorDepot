@@ -17,7 +17,7 @@ import ua.nure.soprunov.SummaryTask.web.command.driver.*;
 /**
  * Holder for all commands.<br/>
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 public class CommandContainer {
 

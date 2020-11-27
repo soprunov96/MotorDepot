@@ -3,7 +3,7 @@ package ua.nure.soprunov.SummaryTask.exception;
 /**
  * An exception that provides information on an application error.
  * 
- * @author D.Kolesnikov
+ * @author Soprunov Igor & Pavlo Kosiak
  * 
  */
 public class AppException extends Exception {

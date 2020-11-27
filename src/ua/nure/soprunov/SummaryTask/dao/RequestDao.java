@@ -7,7 +7,7 @@ import ua.nure.soprunov.SummaryTask.dao.entity.Request;
  * In this class we can add some specific operations for RequestDao implementation
  *
  * @see ua.nure.soprunov.SummaryTask.dao.Dao
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public interface RequestDao extends Dao <Request> {

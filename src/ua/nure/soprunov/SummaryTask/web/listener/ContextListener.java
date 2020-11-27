@@ -14,7 +14,7 @@ import org.apache.log4j.PropertyConfigurator;
 /**
  * Context listener. Initializes log4j and Command Manager for future use.
  * 
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public class ContextListener implements ServletContextListener {

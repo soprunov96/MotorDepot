@@ -13,7 +13,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Logout command. Command allowed  for all  logged in users.
  * 
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public class LogoutCommand extends Command {

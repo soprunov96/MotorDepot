@@ -3,7 +3,7 @@ package ua.nure.soprunov.SummaryTask.dao.datasource;
 /**
  * DataSourceType entity.
  *
- * @author Igor.Soprunov
+ * @author Soprunov Igor & Pavlo Kosiak
  *
  */
 

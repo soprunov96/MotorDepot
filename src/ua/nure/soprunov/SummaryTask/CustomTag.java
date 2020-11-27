@@ -16,7 +16,7 @@ import java.io.IOException;
  * Custom tag class which needed to check if user login is unique
  *
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class CustomTag extends SimpleTagSupport {

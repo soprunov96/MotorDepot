@@ -3,7 +3,7 @@ package ua.nure.soprunov.SummaryTask.exception;
 /**
  * An exception that provides information on a database access error.
  * 
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public class DBException extends AppException {

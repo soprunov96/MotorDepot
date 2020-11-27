@@ -27,7 +27,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Login command. Command allowed  for all users.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class LoginCommand extends Command {

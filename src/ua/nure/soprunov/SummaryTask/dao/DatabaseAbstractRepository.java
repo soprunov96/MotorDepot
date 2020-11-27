@@ -14,7 +14,7 @@ import ua.nure.soprunov.SummaryTask.exception.Messages;
  * Statements. Also performs rollbacking of transaction.And common methods.
  *
  * @param <T> type of entity
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 public abstract class DatabaseAbstractRepository<T> implements Dao <T>{
 

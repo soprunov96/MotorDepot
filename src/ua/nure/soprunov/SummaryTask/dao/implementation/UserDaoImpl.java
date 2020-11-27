@@ -22,7 +22,7 @@ import javax.sql.DataSource;
 /**
  * User DAO implementation. Performs basic read/write operations on User data.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class UserDaoImpl extends DatabaseAbstractRepository<User> implements UserDao {

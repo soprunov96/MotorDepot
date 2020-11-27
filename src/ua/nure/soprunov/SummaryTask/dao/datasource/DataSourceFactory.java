@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * DataSourceFactory use to  get datasource from DB with or without JNDI
  * If use JNDI configure context.xml or server.xml
  *
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  *
  */
 

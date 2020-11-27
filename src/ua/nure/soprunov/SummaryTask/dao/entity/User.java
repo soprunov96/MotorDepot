@@ -5,7 +5,7 @@ package ua.nure.soprunov.SummaryTask.dao.entity;
  * login, password, role in system. Login
  * should be unique. Every field must be filled.
  *
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  */
 public class User extends Entity {
 

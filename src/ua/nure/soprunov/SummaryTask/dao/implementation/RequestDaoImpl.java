@@ -22,7 +22,7 @@ import javax.sql.DataSource;
 /**
  * Request DAO implementation. Performs basic read/write operations on Request entity.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  *
  */
 

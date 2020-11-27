@@ -25,7 +25,7 @@ import ua.nure.soprunov.SummaryTask.web.command.Command;
 /**
  * Command that show all list of requests. Command allowed  for all  logged in users.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 public class ListOfAllocationRequestCommand extends Command {

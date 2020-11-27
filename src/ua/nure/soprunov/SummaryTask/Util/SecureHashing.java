@@ -11,7 +11,7 @@ import java.security.spec.InvalidKeySpecException;
  * Security class. Which methods generating  and validate a hash,
  * from a given message using  a cryptographic hash function.
  *
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  */
 
 

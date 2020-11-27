@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Root of all entities which have identifier field.Provides id field and get/set methods
  * to him.
  * 
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public abstract class Entity implements Serializable {

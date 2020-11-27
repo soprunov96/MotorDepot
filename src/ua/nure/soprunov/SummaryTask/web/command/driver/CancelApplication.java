@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * Command that cancel previous application. Command allowed  for drivers.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  *
  */
 

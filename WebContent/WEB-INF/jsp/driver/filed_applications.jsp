@@ -2,8 +2,7 @@
 <%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <c:set var="title" value="Filed applications" scope="page"/>
 <%@ include file="/WEB-INF/jspf/head.jspf" %>
@@ -137,7 +136,7 @@
                     <c:forEach items="${listFlight}" var="flight">
                     <c:forEach items="${listRequest}" var="request">
 
-                    <c:if test="${(request.id == flight.requestId)and (flight.driverId == 0) and (request.driverId == user.id)}">
+                    <c:if test="${(request.id == flight.requestId)and (request.driverId == user.id)}">
                     <tr>
 
                         <td>${flight.id}</td>
@@ -153,8 +152,7 @@
                             <button type="button" class="btn btn-link icon_delete"
                                     data-toggle="modal" data-target="#deleteEntity"
                                     name="idToDelete"
-                                    aria-label="Remove the element"
-                                    data-id="${request.id}"><i class="fa fa-trash"></i></button>
+                                    data-id="${flight.requestId}"><i class="fa fa-trash"></i></button>
                         </td>
 
                     </tr>
@@ -165,7 +163,7 @@
                     </c:forEach>
                     <h3 class="text-white"></h3>
                 </table>
-<%--                <h3 class="text-white">  <c:out value="${sizeOfDriverRequest}" /></h3>--%>
+
             </form>
 
         </td>

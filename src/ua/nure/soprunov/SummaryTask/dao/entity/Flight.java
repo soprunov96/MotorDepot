@@ -4,7 +4,7 @@ package ua.nure.soprunov.SummaryTask.dao.entity;
  * Flight entity.
  * Every flight have name, date, depart, arrival, status.
  * 
- * @author Igor Soprunov
+ @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public class Flight extends Entity {

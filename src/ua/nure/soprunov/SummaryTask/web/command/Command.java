@@ -14,7 +14,7 @@ import ua.nure.soprunov.SummaryTask.exception.AppException;
 /**
  * Main interface for the Command pattern implementation.
  * 
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  * 
  */
 public abstract class Command implements Serializable {

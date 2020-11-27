@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * ChangeAvatarCommand  download  avatar img, insert  img data to db. Command allowed  for all users.
  *
- * @author Soprunov Igor
+ *  @authors Soprunov Igor & Pavlo Kosiak
  */
 
 @MultipartConfig
