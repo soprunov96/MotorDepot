@@ -2,6 +2,7 @@
 
 <%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
 <%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
+<%@ taglib prefix="ex" uri="/WEB-INF/UserTag.tld" %>
 
 <fmt:setLocale value="${param.locale}" scope="session"/>
 <tr>
@@ -10,6 +11,7 @@
         <nav class="navbar fixed-top navbar-dark bg-dark navbar-padding">
 
             <c:if test="${not empty user}">
+
 
 
                 <div id="leftHeader">
@@ -178,7 +180,8 @@ This way we define the menu located at the right of header.
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
                             <div class="profile bg-white">
-                                <img   src="images/${user.userAvatar}" alt="Avatar">
+<%--                                <img   src="images/${user.getUserAvatar()}" alt="Avatar">--%>
+                                  <ex:showAvatar user="${user}"/>
                                 <h4 class="display-5"><c:out value="${user.firstName} ${user.lastName}"/></h4>
                                 <c:if test="${not empty userRole}">
                                     <h4 class="display-5"><c:out value=" (${userRole.name})"/></h4>
@@ -190,28 +193,28 @@ This way we define the menu located at the right of header.
                                 </button>
                                 <a class="btn btn-outline-primary"
                                    href="controller?command=getPdf"><fmt:message key="header_jspf.profile.btn.getPdf"/></a> &nbsp;
-<%--                                <hr class="my-4">--%>
-<%--                                <form action="controller?command=changeAvatar" method="post"--%>
-<%--                                      enctype="multipart/form-data">--%>
-<%--                                    <input type="hidden" name="previousCommand"--%>
-<%--                                           value="${pageContext.request.queryString}">--%>
-<%--                                    <input type="hidden" name="id"--%>
-<%--                                           value="${user.id}">--%>
-<%--                                    <h6 class="display-5"><fmt:message key="header_jspf.profile.text.change_avatar"/></h6>--%>
-<%--                                    <div class="input-group profile-input">--%>
-<%--                                        <div class="custom-file">--%>
-<%--                                            <input class="custom-file-input" type="file" id="myFile" name="filename"--%>
-<%--                                                   accept=".png, .jpg, .jpeg">--%>
+                                <hr class="my-4">
+                                <form action="controller?command=changeAvatar" method="post"
+                                      enctype="multipart/form-data">
+                                    <input type="hidden" name="previousCommand"
+                                           value="${pageContext.request.queryString}">
+                                    <input type="hidden" name="id"
+                                           value="${user.id}">
+                                    <h6 class="display-5"><fmt:message key="header_jspf.profile.text.change_avatar"/></h6>
+                                    <div class="input-group profile-input">
+                                        <div class="custom-file">
+                                            <input class="custom-file-input" type="file" id="myFile" name="filename"
+                                                   accept=".png, .jpg, .jpeg">
 
-<%--                                            <label class="custom-file-label" for="myFile" ><fmt:message key="header_jspf.profile.input.choose_file"/></label>--%>
+                                            <label class="custom-file-label" for="myFile" ><fmt:message key="header_jspf.profile.input.choose_file"/></label>
 
-<%--                                        </div>--%>
+                                        </div>
 
-<%--                                    </div>--%>
-<%--                                    <button class="btn btn-outline-primary" type="submit"--%>
-<%--                                            id="inputGroupFileAddon04"><fmt:message key="header_jspf.profile.button.upload"/>--%>
-<%--                                    </button>--%>
-<%--                                </form>--%>
+                                    </div>
+                                    <button class="btn btn-outline-primary" type="submit"
+                                            id="inputGroupFileAddon04"><fmt:message key="header_jspf.profile.button.upload"/>
+                                    </button>
+                                </form>
                             </div>
 
 

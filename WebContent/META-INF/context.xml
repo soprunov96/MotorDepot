@@ -4,16 +4,16 @@
 
     <!--		Another way how to configure DataSouce with out server.xml -->
 
-    <!--    	    <Resource name="jdbc/MYDB"-->
-    <!--    		auth="Container"-->
-    <!--    		type="javax.sql.DataSource"-->
-    <!--    		maxTotal="100" maxIdle="30" maxWaitMillis="10000"-->
-    <!--    		username="root" password="root"-->
-    <!--    		driverClassName="com.mysql.cj.jdbc.Driver"-->
-    <!--    		defaultAutoCommit="false"-->
-    <!--    		defaultTransactionIsolation="READ_COMMITTED"-->
-    <!--    		connectionProperties="useUnicode=yes;characterEncoding=utf8;serverTimezone=UTC;"-->
-    <!--    		url="jdbc:mysql://localhost:3306/mydb"/>-->
+        	    <Resource name="jdbc/MYDB"
+        		auth="Container"
+        		type="javax.sql.DataSource"
+        		maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+        		username="root" password="root"
+        		driverClassName="com.mysql.cj.jdbc.Driver"
+        		defaultAutoCommit="false"
+        		defaultTransactionIsolation="READ_COMMITTED"
+        		connectionProperties="useUnicode=yes;characterEncoding=utf8;serverTimezone=UTC;"
+        		url="jdbc:mysql://localhost:3306/mydb"/>
 
 
     <!--    Define DataSource at global level by defining them in the TOMCAT_HOME/conf/server.xml
@@ -21,10 +21,10 @@
       of server or application specific.Also you should add Sql driver to Tomcat lib.
     -->
 
-    <ResourceLink name="jdbc/MYDB"
-                  global="jdbc/MYDB"
-                  auth="Container"
-                  type="javax.sql.DataSource"
-    />
+<!--    <ResourceLink name="jdbc/MYDB"-->
+<!--                  global="jdbc/MYDB"-->
+<!--                  auth="Container"-->
+<!--                  type="javax.sql.DataSource"-->
+<!--    />-->
 
 </Context>

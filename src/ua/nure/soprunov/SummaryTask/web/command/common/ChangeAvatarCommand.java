@@ -1,5 +1,6 @@
 package ua.nure.soprunov.SummaryTask.web.command.common;
 
+import com.sun.org.apache.bcel.internal.util.SecuritySupport;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -20,6 +21,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -28,7 +30,7 @@ import java.util.List;
 /**
  * ChangeAvatarCommand  download  avatar img, insert  img data to db. Command allowed  for all users.
  *
- *  @authors Soprunov Igor & Pavlo Kosiak
+ * @authors Soprunov Igor & Pavlo Kosiak
  */
 
 @MultipartConfig
@@ -39,8 +41,7 @@ public class ChangeAvatarCommand extends Command {
     private String userId;
     private final int fileMaxSize = 10000 * 1024;
     private final int memMaxSize = 1000 * 1024;
-    private String UPLOAD_DIRECTORY = "E:/Project/Motor-Depot-Motor-depot/Motor-depot/WebContent/images";
-
+    private String UPLOAD_DIRECTORY = "E:/Диплом/MASTER_PROJECT/Master_Project-master/WebContent/images";
 
 
     private static final Logger LOG = Logger.getLogger(ChangeAvatarCommand.class);
@@ -121,6 +122,10 @@ public class ChangeAvatarCommand extends Command {
 
         new UserDaoImpl(DataSourceFactory.getDataSource(DataSourceType.MY_SQL_DATASOURCE)).update(user);
 
+        HttpSession session = request.getSession();
+        User userSession = (User) session.getAttribute("user");
+        userSession.setUserAvatar(fileName);
+        session.setAttribute("user", userSession);
 
         try {
             if (command == null) {
